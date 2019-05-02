@@ -1,0 +1,22 @@
+<div class="col-xs-4">
+  <h2>User info</h2>
+  <%= attachment_image_tag user, :image %>
+  <table>
+    <tr>
+      <th>name</th>
+      <td><%= user.name %></td>
+    </tr>
+    <tr>
+      <th>introduction</th>
+      <td><%= user.introduction %></td>
+    </tr>
+  </table>
+  <h2>New Book</h2>
+  <%= form_for(new_book) do |f| %>
+    <p>Title</p>
+    <%= f.text_field :title %>
+    <p>Opinion</p>
+    <%= f.text_field :body %>
+    <%= f.submit 'Create book' %>
+  <% end %>
+</div>

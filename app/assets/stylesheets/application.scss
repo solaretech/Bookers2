@@ -40,8 +40,10 @@ nav{
   margin: 0 auto;
 }
 
-nav > h1{
+nav > h2{
   float: left;
+  margin: 0;
+
 }
 
 .nav-menu-area{
@@ -51,6 +53,7 @@ nav > h1{
 .nav-menu{
   float: left;
   margin-right: 20px;
+  margin-bottom: 0;
   line-height: 36px;
   &:last-child{
     margin-right: 0;
