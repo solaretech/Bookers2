@@ -1,6 +1,6 @@
 <div class="col-xs-4">
   <h2>User info</h2>
-  <%= attachment_image_tag user, :image %>
+  <%= attachment_image_tag user, :image, :fill, 100, 100 %>
   <table class="table table-striped">
     <tr>
       <th>name</th>
@@ -11,6 +11,11 @@
       <td><%= user.introduction %></td>
     </tr>
   </table>
+  <%= link_to(edit_user_path) do %>
+    <div class="btn">
+      <i class="fas fa-cog"></i>
+    </div>
+  <% end %>
   <h2>New Book</h2>
   <%= form_for(new_book) do |f| %>
     <p>Title</p>
