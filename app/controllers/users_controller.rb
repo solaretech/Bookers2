@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
+  before_action :new_book_definition, only:[:index, :show]
+
   def index
     @users = User.all
+    @user = current_user
   end
 
   def show
