@@ -1,0 +1,15 @@
+<%= render '/books/sidebar', {user: @user, new_book: @new_book} %>
+
+<div class="col-xs-8">
+  <h2>Book detail</h2>
+  <table class="table table-striped">
+    <tr>
+      <td>
+        <%= attachment_image_tag @book.user, :image %><br>
+        <%= @book.user.name %>
+      </td>
+      <td><%= @book.title %></td>
+      <td><%= @book.body %></td>
+    </tr>
+  </table>
+</div>
