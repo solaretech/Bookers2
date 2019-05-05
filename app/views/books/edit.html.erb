@@ -1,13 +1,17 @@
-<%= render '/books/errors', model: @book %>
+<div class="col-xs-offset-3 col-xs-6">
+  <%= render '/books/errors', model: @book %>
 
-<h2>Editing Book</h2>
-<%= form_for(@book) do |f| %>
-  <p>Title</p>
-  <%= f.text_field :title %>
-  <p>Opinion</p>
-  <%= f.text_field :body %>
-  <%= f.submit 'Edit book' %>
-<% end %>
-<p>
-  <%= link_to 'Show', book_path(@book) %> | <%= link_to 'Back', books_path %>
-</p>
+  <h2>Editing Book</h2>
+  <%= form_for(@book) do |f| %>
+    <p>Title</p>
+    <%= f.text_field :title, class: "book_title" %>
+    <p>Opinion</p>
+    <%= f.text_field :body, class: "book_body" %>
+    <p class="row">
+      <%= f.submit 'Edit book', class: "btn btn-primary col-xs-12" %>
+    </p>
+  <% end %>
+  <p>
+    <%= link_to 'Show', book_path(@book),class: "book_#{@book.id}" %> | <%= link_to 'Back', books_path, class: "back" %>
+  </p>
+</div>

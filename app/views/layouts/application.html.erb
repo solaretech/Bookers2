@@ -6,7 +6,6 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
 
   <body>
@@ -18,26 +17,26 @@
           <% if user_signed_in? %>
 
           <p class="nav-menu">
-            <%= link_to(user_path(current_user)) do %>
-            <i class="fas fa-home"></i>
+            <%= link_to(user_path(current_user), class:"home") do %>
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
             Home
             <% end %>
           </p>
           <p class="nav-menu">
-            <%= link_to(users_path) do %>
-            <i class="fas fa-user-friends"></i>
+            <%= link_to(users_path, class:"users") do %>
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
             Users
             <% end %>
           </p>
           <p class="nav-menu">
-            <%= link_to(books_path) do %>
-            <i class="fas fa-book"></i>
+            <%= link_to(books_path, class:"books") do %>
+            <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
             Books
             <% end %>
           </p>
           <p class="nav-menu">
-            <%= link_to(destroy_user_session_path, method: :delete) do %>
-            <i class="fas fa-sign-out-alt"></i>
+            <%= link_to(destroy_user_session_path, method: :delete, class:"logout") do %>
+            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
             Logout
             <% end %>
           </p>
@@ -45,26 +44,26 @@
           <% else %>
 
           <p class="nav-menu">
-            <%= link_to(root_path) do %>
-            <i class="fas fa-home"></i>
+            <%= link_to(root_path, class:"home") do %>
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
             Home
             <% end %>
           </p>
           <p class="nav-menu">
-            <%= link_to(about_path) do %>
-            <i class="fas fa-link"></i>
+            <%= link_to(about_path, class:"about") do %>
+            <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
             About
             <% end %>
           </p>
           <p class="nav-menu">
-            <%= link_to(new_user_registration_path) do %>
-            <i class="fas fa-user-plus"></i>
+            <%= link_to(new_user_registration_path, class:"sign_up") do %>
+            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
             Sign up
             <% end %>
           </p>
           <p class="nav-menu">
-            <%= link_to(new_user_session_path) do %>
-            <i class="fas fa-sign-in-alt"></i>
+            <%= link_to(new_user_session_path, class:"sign_in") do %>
+            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
             Login
             <% end %>
           </p>
