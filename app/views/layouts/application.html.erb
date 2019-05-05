@@ -10,7 +10,6 @@
   </head>
 
   <body>
-
     <!-- ヘッダー部分-->
     <header class="clearfix">
       <nav>
@@ -74,6 +73,13 @@
         </div>
       </nav>
     </header>
+
+    <!-- サクセスメッセージ -->
+    <% flash.each do |name, msg| %>
+      <div class="alert alert-<%= name %>">
+        <%= msg.html_safe %>
+      </div>
+    <% end %>
 
     <div class="container">
       <div class="row">

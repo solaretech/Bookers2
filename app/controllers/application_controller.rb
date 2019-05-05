@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
+  # フラッシュメッセージのキーを追加
+  add_flash_types :success, :info, :warning, :danger
+
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def new_book_definition
