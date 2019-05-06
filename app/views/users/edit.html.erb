@@ -7,9 +7,9 @@
     <p>Name</p>
     <%= f.text_field :name, class: "name" %>
     <p>Image</p>
-    <%= f.attachment_field :image class: "user_image"  %>
+    <%= f.attachment_field :image, class: "user_image"  %>
     <p>Introduction</p>
-    <%= f.text_area :introduction class: "introduction"  %>
+    <%= f.text_area :introduction, class: "introduction"  %>
     <p class="row">
       <%= f.submit 'Update user', class: "btn btn-primary col-xs-12" %>
     </p>
